@@ -4,7 +4,9 @@ interface IHeader {
 
 const Header = ({}:IHeader) => {
   return (
-    <div>Header</div>
+    <header>
+      Header
+    </header>
   )
 }
 

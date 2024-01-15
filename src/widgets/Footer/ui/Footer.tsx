@@ -4,7 +4,9 @@ interface IFooter {
 
 const Footer = ({}:IFooter) => {
   return (
-    <div>Footer</div>
+    <footer>
+      FOOter
+    </footer>
   )
 }
 
