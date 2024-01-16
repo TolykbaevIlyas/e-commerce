@@ -4,8 +4,13 @@ interface IFooter {
 
 const Footer = ({}:IFooter) => {
   return (
-    <footer>
-      FOOter
+    <footer className="flex justify-between">
+      <div>
+        Almaty 2024
+      </div>
+      <div>
+        IT
+      </div>
     </footer>
   )
 }
