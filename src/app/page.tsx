@@ -1,10 +1,14 @@
+import Carousel from "@/widgets/Carousel/ui/Carousel"
+
 interface IHomePage {
 
 }
 
 const HomePage = ({}:IHomePage) => {
   return (
-    <div>HomePage</div>
+    <main>
+      <Carousel/>
+    </main>
   )
 }
 
