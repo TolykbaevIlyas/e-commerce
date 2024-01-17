@@ -16,20 +16,21 @@ const Header = ({}:IHeader) => {
       <div>
         <Image alt="Logo" src=""/>
       </div>
-      <nav className="flex justify-between items-center">
+      <nav className="flex justify-between items-center ">
         { Path === "/" ? 
           <div className="ml-10">
             <Link href="/">Home</Link>
+            <div className="border-b-2 border-white"></div>
           </div> 
           :
-          <div className="ml-10">
+          <div className="ml-10 ">
             <Link href="/">Home</Link>
           </div>
         }
-        <div className="ml-10">
+        <div className="ml-10 hover:pb-2 duration-100 hover:underline">
           <Link href="/">Products</Link>
         </div>
-        <div className="ml-10">
+        <div className="ml-10 hover:pb-2 duration-100 hover:underline">
           <Link href="/">Forum</Link>
         </div>
       </nav>
