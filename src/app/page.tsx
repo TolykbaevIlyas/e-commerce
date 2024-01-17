@@ -1,4 +1,5 @@
-import Carousel from "@/widgets/Carousel/ui/Carousel"
+
+import { Carousel } from "@/widgets/Carousel"
 import { Products } from "@/widgets/Products"
 
 interface IHomePage {
