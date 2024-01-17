@@ -1,9 +1,11 @@
-import Image from 'next/image'
+interface IHomePage {
 
-export default function Home() {
+}
+
+const HomePage = ({}:IHomePage) => {
   return (
-   <div>
-    
-   </div>
+    <div>HomePage</div>
   )
 }
+
+export default HomePage
