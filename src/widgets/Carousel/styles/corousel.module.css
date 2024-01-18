@@ -1,0 +1,10 @@
+.carouselStyles{
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scrollbar-color: rebeccapurple green;
+    
+}
+.carouselStyles::-webkit-scrollbar{
+    width: 0;
+}
