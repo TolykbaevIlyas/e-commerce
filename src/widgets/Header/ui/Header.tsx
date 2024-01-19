@@ -1,8 +1,10 @@
 "use client"
 
+import { Button } from "@/shared/ui/button"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
+import { useState } from "react"
 
 interface IHeader {
 
@@ -10,7 +12,8 @@ interface IHeader {
 
 const Header = ({}:IHeader) => {
   const Path = usePathname();
-  console.log(Path)
+  const [FavModalStatus, setFavModalStatus] = useState(false);
+  const [CartModalStatus, setCartModalStatus] = useState(false);    
   return (
     <header className="flex justify-between w-full items-center pt-10 pb-10">
       <div className="pl-5">
@@ -23,13 +26,13 @@ const Header = ({}:IHeader) => {
             <div className="border-b-2 border-white"></div>
           </div> 
           :
-          <div className="ml-10 ">
+          <div className="ml-10 hover:pb-2 duration-100 hover:underline">
             <Link href="/">Home</Link>
           </div>
         }
         {
           Path === "/Products" ?
-          <div className="ml-10 hover:pb-2 duration-100 hover:underline">
+          <div className="ml-10 hover:pb-2 duration-100 ">
             <Link href="/Products">Products</Link>
             <div className="border-b-2 border-white"></div>
           </div>
@@ -40,7 +43,7 @@ const Header = ({}:IHeader) => {
         }
         {
           Path === "/Forum" ?
-          <div className="ml-10 hover:pb-2 duration-100 hover:underline">
+          <div className="ml-10 hover:pb-2 duration-100 ">
             <Link href="/Forum">Forum</Link>
             <div className="border-b-2 border-white"></div>
           </div>
@@ -51,11 +54,25 @@ const Header = ({}:IHeader) => {
         }
       </nav>
       <div className="flex">
-        <p className="pl-5">Cart</p>
-        <p className="pl-5">Favourite</p>
+        <Button 
+          type="button"
+          onClick={() => setFavModalStatus(!FavModalStatus)}
+          className="ml-5">
+          Favorite
+        </Button>
+        <Button
+          type="button"
+          onClick={()=> setCartModalStatus(!CartModalStatus)}
+          className="ml-5">
+          Cart
+        </Button>
       </div>
       <div>
-        <p className="pr-5">Profile</p>
+        <Button
+          type="button"
+          className="mr-5">
+          Profile
+        </Button>
       </div>
     </header>
   )
