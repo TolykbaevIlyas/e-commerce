@@ -13,8 +13,8 @@ const Header = ({}:IHeader) => {
   console.log(Path)
   return (
     <header className="flex justify-between w-full items-center pt-10 pb-10">
-      <div>
-        <Image alt="Logo" src=""/>
+      <div className="pl-5">
+        <p>e-commerce</p>
       </div>
       <nav className="flex justify-between items-center ">
         { Path === "/" ? 
@@ -27,19 +27,35 @@ const Header = ({}:IHeader) => {
             <Link href="/">Home</Link>
           </div>
         }
-        <div className="ml-10 hover:pb-2 duration-100 hover:underline">
-          <Link href="/">Products</Link>
-        </div>
-        <div className="ml-10 hover:pb-2 duration-100 hover:underline">
-          <Link href="/">Forum</Link>
-        </div>
+        {
+          Path === "/Products" ?
+          <div className="ml-10 hover:pb-2 duration-100 hover:underline">
+            <Link href="/Products">Products</Link>
+            <div className="border-b-2 border-white"></div>
+          </div>
+          :
+          <div className="ml-10 hover:pb-2 duration-100 hover:underline">
+            <Link href="/Products">Products</Link>
+          </div>
+        }
+        {
+          Path === "/Forum" ?
+          <div className="ml-10 hover:pb-2 duration-100 hover:underline">
+            <Link href="/Forum">Forum</Link>
+            <div className="border-b-2 border-white"></div>
+          </div>
+          :
+          <div className="ml-10 hover:pb-2 duration-100 hover:underline">
+            <Link href="/Forum">Forum</Link>
+          </div>
+        }
       </nav>
       <div className="flex">
-        <Image alt="Cart" src=""/>
-        <Image alt="favorite" src=""/>
+        <p className="pl-5">Cart</p>
+        <p className="pl-5">Favourite</p>
       </div>
       <div>
-        <Image alt="Profile" src=""/>
+        <p className="pr-5">Profile</p>
       </div>
     </header>
   )
