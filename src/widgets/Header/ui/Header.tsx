@@ -1,5 +1,6 @@
 "use client"
 
+import { CartModal } from "@/features/CartModal"
 import { FavModal } from "@/features/FavModal"
 import { Button } from "@/shared/ui/button"
 import Image from "next/image"
@@ -74,6 +75,12 @@ const Header = ({}:IHeader) => {
           className="ml-5">
           Cart
         </Button>
+        {
+          CartModalStatus === true ?
+          <CartModal CartModalStatus={CartModalStatus} setCartModalStatus={()=> setCartModalStatus()}/>
+          :
+          null
+        }
       </div>
       <div>
         <Button
