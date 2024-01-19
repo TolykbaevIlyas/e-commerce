@@ -1,5 +1,6 @@
 "use client"
 
+import { FavModal } from "@/features/FavModal"
 import { Button } from "@/shared/ui/button"
 import Image from "next/image"
 import Link from "next/link"
@@ -13,7 +14,8 @@ interface IHeader {
 const Header = ({}:IHeader) => {
   const Path = usePathname();
   const [FavModalStatus, setFavModalStatus] = useState(false);
-  const [CartModalStatus, setCartModalStatus] = useState(false);    
+  const [CartModalStatus, setCartModalStatus] = useState(false);
+  console.log(FavModalStatus)    
   return (
     <header className="flex justify-between w-full items-center pt-10 pb-10">
       <div className="pl-5">
@@ -60,6 +62,12 @@ const Header = ({}:IHeader) => {
           className="ml-5">
           Favorite
         </Button>
+        {
+          FavModalStatus === true ?
+            <FavModal FavModalStatus={FavModalStatus} setFavModalStatus={() => setFavModalStatus()}/>
+          :
+            null
+        }
         <Button
           type="button"
           onClick={()=> setCartModalStatus(!CartModalStatus)}
