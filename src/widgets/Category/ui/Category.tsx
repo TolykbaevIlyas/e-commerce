@@ -4,7 +4,7 @@ interface IProducts {
 
 }
 
-const Products = ({}:IProducts) => {
+const Category = ({}:IProducts) => {
   const Prod = [
     {
       id:1,
@@ -18,10 +18,10 @@ const Products = ({}:IProducts) => {
     }
   ]
   return (
-    <div className="flex">
+    <div className="flex flex-wrap">
       {Prod.map((prod)=><ProductCard title={prod.name} description={prod.desc}/>)}
     </div>
   )
 }
 
-export default Products
+export default Category

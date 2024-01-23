@@ -8,7 +8,7 @@ interface IProductCard {
 
 const ProductCard = ({title,description,link}: IProductCard) => {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl ml-20">
+    <div className="card w-96 bg-base-100 shadow-xl ml-20 mt-5">
       <figure>
         <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
       </figure>

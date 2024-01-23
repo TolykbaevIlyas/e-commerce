@@ -1,2 +1,2 @@
-import Products from "./ui/Products";
+import Products from "./ui/Category";
 export {Products}
