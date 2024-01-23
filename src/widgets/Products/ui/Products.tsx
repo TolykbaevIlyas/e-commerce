@@ -1,4 +1,5 @@
 import { ProductCard } from "@/entities/ProductCard"
+import { SearchInput } from "@/features/SearchInput"
 
 const Products = () => {
     const Prod = [
@@ -36,6 +37,7 @@ const Products = () => {
   return (
     <div className="">
         <h2 className="text-center text-2xl"> Products</h2>
+        <SearchInput/>
         <div className="flex mt-10 flex-wrap">
             {Prod.map((prod)=><ProductCard title={prod.name} description={prod.desc}/>)}
         </div>
